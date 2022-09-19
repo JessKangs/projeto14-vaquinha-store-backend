@@ -14,6 +14,6 @@ server.use(authRouter);
 server.use(productsRouter)
 server.use(cartsRouter)
 
-server.listen(process.env.PORT || 3000, () => {
+server.listen(5000, () => {
     console.log(`Magic happens on ${process.env.PORT}`)
 });
