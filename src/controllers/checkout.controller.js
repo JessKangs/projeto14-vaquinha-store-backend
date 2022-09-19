@@ -7,7 +7,7 @@ async function finishBuying (req, res) {
     const resposta = await db.collection("sessions").findOne({ token })
 
     try {
-        console.log('eeh')
+        
         const response = await db.collection("buys").insertOne({ userId: resposta.userId, productsId: data.productsId })
 
         await db.collection("carts").deleteMany({ userId: resposta.userId})
